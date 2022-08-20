@@ -13,12 +13,7 @@
     .col-12.col-md-4
       = f.input :ends_at, as: :string, required: true
     .col-12.col-md-4
-
-
-
-
       %label.form-check-label{ for: "event_timezone" } Time zone
-
       = f.time_zone_select :timezone
     .col-12
       = f.input :description, as: :text, input_html: { rows: 3 },
