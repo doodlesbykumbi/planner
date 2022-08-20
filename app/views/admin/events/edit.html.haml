@@ -15,10 +15,13 @@
             = f.input :slug
           .col-12
             = f.input :date_and_time, as: :string, required: true, label: 'Date', input_html: { data: { value: @event.date_and_time.strftime('%d/%m/%Y') } }
-          .col-12.col-md-6
+          .col-12.col-md-4
             = f.input :begins_at, as: :string, required: true, input_html: { data: { value: @event.date_and_time.time.strftime('%H:%M') }}
-          .col-6.col-md-6
+          .col-12.col-md-4
             = f.input :ends_at, as: :string, required: true, input_html: { data: { value: @event.ends_at.strftime('%H:%M') }}
+          .col-12.col-md-4
+            %label.form-check-label{ for: "event_timezone" } Time zone
+            = f.time_zone_select :timezone
           .col-12
             = f.input :description, as: :text, input_html: { rows: 3 },
             hint: 'Use this space to write an invitation message and description of the event. This copy will also be used in the email invitation. You can use HTML here!'

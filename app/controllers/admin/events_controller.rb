@@ -3,7 +3,7 @@ class Admin::EventsController < Admin::ApplicationController
   before_action :find_event, only: %i[edit update]
 
   def new
-    @event = Event.new
+    @event = Event.new(timezone: "London")
   end
 
   def create
