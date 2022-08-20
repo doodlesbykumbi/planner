@@ -99,7 +99,7 @@ class Event < ActiveRecord::Base
   private
 
   def time_zone
-    'London'
+    self.timezone || "London"
   end
 
   def duplicated_sponsors
