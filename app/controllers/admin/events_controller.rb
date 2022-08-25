@@ -3,7 +3,7 @@ class Admin::EventsController < Admin::ApplicationController
   before_action :find_event, only: %i[edit update]
 
   def new
-    @event = Event.new(timezone: "London")
+    @event = Event.new(timezone: 'London')
   end
 
   def create
@@ -74,7 +74,8 @@ class Admin::EventsController < Admin::ApplicationController
 
   def event_params
     params.require(:event).permit(
-      :name, :slug, :date_and_time, :begins_at, :ends_at, :timezone, :description, :info, :schedule, :venue_id, :external_url,
+      :name, :slug, :date_and_time, :begins_at, :ends_at, :timezone, :description, :info, :schedule,
+      :venue_id, :external_url,
       :coach_spaces, :student_spaces, :email, :announce_only, :tito_url, :invitable, :student_questionnaire,
       :confirmation_required, :surveys_required, :audience,
       :coach_questionnaire, :show_faq, :display_coaches, :display_students,
