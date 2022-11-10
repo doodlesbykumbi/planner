@@ -17,6 +17,7 @@
           = t('members.new.students.criteria_brief')
         %p.lead
           = t('members.new.students.github')
+        = image_tag("nyc-workshop.jpg", alt: "a photo from a codebar NYC workshop", class: "mw-100 pb-4")
         .d-flex.flex-column.align-items-start
           = link_to registration_path(member_type: 'student'), class: 'btn-lg btn-primary mb-4 text-decoration-none' do
             = t('members.sign_up_as_student')
